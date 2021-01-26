@@ -8,4 +8,3 @@ router.post('/api/basket', basketController.addToBasket);
 router.patch('/api/basket/:id', basketController.deleteItemInBasket);
 
 export = router;
-

@@ -3,6 +3,7 @@ import * as logger from 'morgan';
 import * as bodyParser from 'body-parser';
 import * as cors from 'cors';
 import * as basketRoutes from './routes/basket';
+import * as hotelsRoutes from './routes/hotels';
 
 const port = process.env.PORT || 8000;
 const app = express();
@@ -13,5 +14,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(basketRoutes);
+app.use(hotelsRoutes)
 
 app.listen(port, () => console.info(`Listening on port: ${port}`));
